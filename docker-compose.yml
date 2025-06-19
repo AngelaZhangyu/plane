@@ -155,10 +155,7 @@ services:
       - /home/app/data/plane-minio:/export
     environment:
       MINIO_ROOT_USER: ${AWS_ACCESS_KEY_ID}
-      MINIO_ROOT_PASSWORD: ${AWS_SECRET_ACCESS_KEY}
-    ports:
-      - "9000:9000"           # ← 暴露 API 端口
-      - "9090:9090"           # ← 暴露控制台端口
+      MINIO_ROOT_PASSWORD: ${AWS_SECRET_ACCESS_KEY}       # ← 暴露控制台端口
 
   # Comment this if you already have a reverse proxy running
   proxy:
